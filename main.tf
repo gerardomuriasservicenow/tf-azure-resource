@@ -1,11 +1,11 @@
 # Configure the Azure provider
 terraform {
-  required_providers {
-    azurerm = {
-      source = "hashicorp/azurerm"
-      version = ">= 2.26"
-    }
-  }
+  # required_providers {
+  #   azurerm = {
+  #     source = "hashicorp/azurerm"
+  #     version = ">= 2.26"
+  #   }
+  # }
 }
 
 provider "azurerm" {
@@ -23,7 +23,7 @@ resource "azurerm_resource_group" "gerardomysqlresourcegroup" {
 }
 
 resource "azurerm_mysql_server" "mysql_server_instance1" {
-  name                = "${var.stack_name}”
+  name                = "${var.stack_name}"
   location            = azurerm_resource_group.gerardomysqlresourcegroup.location
   resource_group_name = azurerm_resource_group.gerardomysqlresourcegroup.name
 
