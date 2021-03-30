@@ -17,12 +17,12 @@ provider "azurerm" {
 #  location = "westus2"
 #}
 
-resource "azurerm_resource_group" "example" {
+resource "azurerm_resource_group" "mysql_resourcegroup" {
   name     = "example-resources"
   location = "West Europe"
 }
 
-resource "azurerm_mysql_server" "example" {
+resource "azurerm_mysql_server" "mysqlserver_instance_1" {
   name                = "mysqlserver_instance_1"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
