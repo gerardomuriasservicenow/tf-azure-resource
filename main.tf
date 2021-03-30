@@ -23,7 +23,7 @@ resource "azurerm_resource_group" "example" {
 }
 
 resource "azurerm_mysql_server" "example" {
-  name                = "example-mysqlserver"
+  name                = "mysqlserver_instance_1"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
 
