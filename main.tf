@@ -12,11 +12,6 @@ provider "azurerm" {
   features {}
 }
 
-#resource "azurerm_resource_group" "rg" {
-#  name     = "myTFResourceGroup"
-#  location = "westus2"
-#}
-
 resource "azurerm_resource_group" "gerardomysqlresourcegroup" {
   name     = "gerardomysqlresourcegroup"
   location = "West Europe"
