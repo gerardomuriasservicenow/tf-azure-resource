@@ -24,8 +24,8 @@ resource "azurerm_resource_group" "mysql_resourcegroup" {
 
 resource "azurerm_mysql_server" "mysqlserver_instance_1" {
   name                = "mysqlserver_instance_1"
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.mysql_resourcegroup.location
+  resource_group_name = azurerm_resource_group.mysql_resourcegroup.name
 
   administrator_login          = "mysqladminun"
   administrator_login_password = "H@Sh1CoR3!"
