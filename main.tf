@@ -17,15 +17,15 @@ provider "azurerm" {
 #  location = "westus2"
 #}
 
-resource "azurerm_resource_group" "mysqlresourcegroup" {
+resource "azurerm_resource_group" "gerardomysqlresourcegroup" {
   name     = "exampleresources"
   location = "West Europe"
 }
 
-resource "azurerm_mysql_server" "mysqlserverinstance1" {
-  name                = "mysqlserverinstance1"
-  location            = azurerm_resource_group.exampleresources.location
-  resource_group_name = azurerm_resource_group.exampleresources.name
+resource "azurerm_mysql_server" "gerardomysqlserverinstance1" {
+  name                = "gerardomysqlserverinstance1"
+  location            = azurerm_resource_group.gerardomysqlresourcegroup.location
+  resource_group_name = azurerm_resource_group.gerardomysqlresourcegroup.name
 
   administrator_login          = "mysqladminun"
   administrator_login_password = "H@Sh1CoR3!"
