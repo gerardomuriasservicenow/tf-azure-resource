@@ -18,7 +18,7 @@ provider "azurerm" {
 #}
 
 resource "azurerm_resource_group" "gerardomysqlresourcegroup" {
-  name     = "exampleresources"
+  name     = "gerardomysqlresourcegroup"
   location = "West Europe"
 }
 
