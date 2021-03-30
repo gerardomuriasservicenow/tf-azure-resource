@@ -22,7 +22,7 @@ resource "azurerm_resource_group" "gerardomysqlresourcegroup" {
   location = "West Europe"
 }
 
-resource "azurerm_mysql_server" var.stack_name {
+resource "azurerm_mysql_server" "mysql_server_instance1" {
   name                = var.stack_name
   location            = azurerm_resource_group.gerardomysqlresourcegroup.location
   resource_group_name = azurerm_resource_group.gerardomysqlresourcegroup.name
