@@ -14,12 +14,11 @@ provider "azurerm" {
   client_id       = var.clientId
   client_secret   = var.clientSecret
   tenant_id       = var.tenantId
-
 }
 
 resource "azurerm_resource_group" "gerardomysqlresourcegroup" {
   name     = "gerardomysqlresourcegroup"
-  location = "West Europe"
+  location = "${var.location}"
 }
 
 resource "azurerm_mysql_server" "mysql_server_instance1" {
@@ -27,8 +26,8 @@ resource "azurerm_mysql_server" "mysql_server_instance1" {
   location            = azurerm_resource_group.gerardomysqlresourcegroup.location
   resource_group_name = azurerm_resource_group.gerardomysqlresourcegroup.name
 
-  administrator_login          = "mysqladminun"
-  administrator_login_password = "H@Sh1CoR3!"
+  administrator_login          = "${var.bbdd_admin_user}"
+  administrator_login_password = "${var.bbdd_admin_pwd}"
 
   sku_name   = "B_Gen5_2"
   storage_mb = 5120
