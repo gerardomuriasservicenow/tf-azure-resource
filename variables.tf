@@ -8,12 +8,12 @@ variable "location" {
   default = "West Europe"
 }
 
-variable "bdd_admin_user"{
+variable "bbdd_admin_user"{
   type = string
   default = "mysqladminun"
 }
 
-variable "bdd_admin_pwd"{
+variable "bbdd_admin_pwd"{
   type = string
   default = "H@Sh1CoR3!"
 }
