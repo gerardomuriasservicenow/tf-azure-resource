@@ -23,10 +23,13 @@ variable "subsId" {
 }
 
 variable "clientId" {
+
 }
 
 variable "clientSecret" {
+
 }
 
 variable "tenantId" {
+  
 }
